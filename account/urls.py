@@ -1,7 +1,8 @@
 from django.conf.urls import url
 from . import views
 from django.contrib.auth.views import login, logout, logout_then_login, password_change, password_change_done
-from django.contrib.auth.views import password_reset, password_reset_done, password_reset_confirm, password_reset_complete
+from django.contrib.auth.views import password_reset, password_reset_done, password_reset_confirm, \
+     password_reset_complete
 
 urlpatterns = [
     # 登入登出
@@ -20,6 +21,6 @@ urlpatterns = [
         name='password_reset_confirm'),
     url(r'^password-reset/complete/$', password_reset_complete,
         name='password_reset_complete'),
-
-
+    # 注册
+    url(r'^register/$', views.register, name='register'),
 ]

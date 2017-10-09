@@ -10,7 +10,7 @@
             请重试
         </p>
     {% else %}
-        <p>请填写表单以登录:</p>
+        <p>请填写表单以登录,如果你没有账户<a href="{% url "register" %}">点这里注册</a> </p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">

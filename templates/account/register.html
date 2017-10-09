@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    创建一个新账户
+{% endblock %}
+{% block content %}
+    <h1>创建一个新账户</h1>
+    <p>请使用表单以注册：</p>
+    <form action="." method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="创建我的账户">
+    </form>
+{% endblock %}
