@@ -23,4 +23,6 @@ urlpatterns = [
         name='password_reset_complete'),
     # 注册
     url(r'^register/$', views.register, name='register'),
+    # profile
+    url(r'^edit/$', views.edit, name='edit'),
 ]

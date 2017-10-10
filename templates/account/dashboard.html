@@ -2,5 +2,8 @@
 {% block title %}dashboard{% endblock %}
 {% block content %}
     <h1>控制台</h1>
-    <p>欢迎来到你的控制台</p>
+    <p>欢迎来到你的控制台.
+       你可以<a href="{% url "edit" %}">编辑你的个人信息</a>
+       或者<a href="{% url "password_change" %}">修改你的密码</a>
+    </p>
 {% endblock %}

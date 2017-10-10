@@ -136,3 +136,7 @@ EMAIL_HOST_USER = '1770360848@qq.com'
 EMAIL_HOST_PASSWORD = 'voxwuognamssgfgg'
 EMAIL_USE_TLS = True
 
+# 用户管理上传的多媒体文件
+MEDIA_URL = '/media/'  # 管理用户上传的多媒体文件的URL
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')   # 文件在本地保存的路径
+
