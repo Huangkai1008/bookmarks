@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -140,3 +141,9 @@ EMAIL_USE_TLS = True
 MEDIA_URL = '/media/'  # 管理用户上传的多媒体文件的URL
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')   # 文件在本地保存的路径
 
+
+# python-social-auth settings
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+)
