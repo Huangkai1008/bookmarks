@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # app
     'account',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 社交认证模块
+    'social.apps.django_app.default',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')   # 文件在本地保存的路径
 
 # python-social-auth settings
 AUTHENTICATION_BACKENDS = (
+    'social_core.backends.qq.QQOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
 )
