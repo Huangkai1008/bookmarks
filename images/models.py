@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 from django.utils.text import slugify
+# from urllib import request
+# from django.core.files.base import ContentFile
 
 
 # Create your models here.
